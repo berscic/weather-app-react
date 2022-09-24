@@ -5,7 +5,7 @@ import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function (props) {
+export default function Weather(props) {
   let [weatherData, setWeatherData] = useState({ ready: false });
   let [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
@@ -17,8 +17,7 @@ export default function (props) {
       description: response.data.weather[0].description,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
-      iconUrl:
-        "https://assets.msn.com/weathermapdata/1/static/svg/72/v2/card_fix_partlysunny/PartlyCloudyDayV3.svg",
+      icon: response.data.weather[0].icon,
     });
   }
 
