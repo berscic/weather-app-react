@@ -5,7 +5,9 @@ export default function App() {
     <div className="container">
       <p className="App">
         This project has been coded by Bernice Scicluna and is{" "}
-        <a href="https://github.com/berscic/weather-app-react">Open Sourced</a>{" "}
+        <a href="https://github.com/berscic/weather-app-react" target="blank">
+          Open Sourced
+        </a>{" "}
         on GitHub
       </p>
     </div>
